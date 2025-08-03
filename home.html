@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sai Indraja Aitha | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f0036, #240090, #3c00b9);
+      color: #fff;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      padding: 1rem 0;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+    }
+
+    .glass-container {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+      max-width: 700px;
+      margin: 2rem auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+      font-size: larger;
+    }
+
+    .glass-container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glow {
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 15px #0ff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #0ff;
+      color: #000;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 4rem 1rem;
+    }
+
+    h2 {
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .skill-bar {
+      margin: 1.5rem 0;
+    }
+
+    .skill-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-label img {
+      width: 35px;
+      height: 35px;
+      border-radius: 6px;
+    }
+
+    .bar-container {
+      width: 100%;
+      height: 18px;
+      background-color: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #0ff;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background-color: #0ff;
+      width: 0;
+      transition: width 2s ease;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    .edu-list li,
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    .resume-embed iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    
+  </style>
+</head>
+<body>
+
+
+<nav>
+    <h1>Sai Indraja</h1>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#resume">Resume</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <div class="glass-container show">
+    <h1>Hi, I'm <span class="glow">Sai Indraja Aitha</span></h1>
+    <p>ECE Student | Software Developer</p>
+    <a href="#about" class="btn">Explore More</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="glass-container">
+    <h2>About Me</h2>
+    <p class="a1">Final-year Electronics & Communication Engineering student with a strong interest in software development. Skilled in Python, HTML, CSS, Django, and Figma. Always learning and building.</p>
+  </div>
+</section>
+<section id="resume">
+  <div class="glass-container">
+    <h2>Resume</h2>
+    <div style="text-align:center;">
+      <a class="btn" href="Indraja resume-pdf.pdf" download>Download Resume</a>
+    </div>
+    
+</section>
+
+<section id="education">
+  <div class="glass-container">
+    <h2>Education</h2>
+    <ul class="edu-list">
+      <pre><li><strong>B-Tech:</strong>       SVR Engineering College, Nandyal (2022–2026) –      GPA: 8.7</li>
+      <li><strong>Intermediate:</strong> Narayana Junior College, Nandyal (2020–2022) –      GPA: 8.4</li>
+      <li><strong>SSC:</strong>          Sri Ravindra (EM) High School, Nandyal (2020) –     GPA: 9.7</li></pre>
+    </ul>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="glass-container">
+    <h2>Skills</h2>
+
+    <div class="skill-bar">
+      <div class="skill-label"><img src="python.jpeg" alt="Python"><span>Python - 90%</span></div>
+      <div class="bar-container"><div class="bar-fill" style="width: 90%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-label"><img src="html-css.png" alt="HTML & CSS"><span>HTML & CSS - 85%</span></div>
+      <div class="bar-container"><div class="bar-fill" style="width: 85%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-label"><img src="django.png" alt="Django"><span>Django - 75%</span></div>
+      <div class="bar-container"><div class="bar-fill" style="width: 75%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-label"><img src="figma.png" alt="Figma"><span>Figma - 80%</span></div>
+      <div class="bar-container"><div class="bar-fill" style="width: 80%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-label"><img src="c.png" alt="C"><span>C Language - 70%</span></div>
+      <div class="bar-container"><div class="bar-fill" style="width: 70%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-label"><img src="vlsi.png" alt="VLSI"><span>VLSI - 65%</span></div>
+      <div class="bar-container"><div class="bar-fill" style="width: 65%;"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="glass-container">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:saiindrajaaitha@gmail.com">saiindrajaaitha@gmail.com</a></p>
+      <p><strong>Phone:</strong> 8143693384</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/saiindraja">github.com/saiindraja</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sai-indraja-aitha-5b20752bb">linkedin.com/in/sai-indraja-aitha</a></p>
+      <p><strong>Credly:</strong> <a href="https://www.credly.com/users/sai-indraja-aitha">credly.com/users/sai-indraja-aitha</a></p>
+    </div>
+  </div>
+</section>
+
+
+    
+</section>
+
+<footer>
+  <p>© 2025 Sai Indraja Aitha | Designed with 💙</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('.glass-container');
+  function revealOnScroll() {
+    sections.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('show');
+      }
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Revanth Kumar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #f5f235;
+      --bg-dark: #ede356;
+      --glass: rgba(241, 247, 72, 0.059);
+      --text: #050505;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(160deg, #d260e7, #60b8d5, #e358e5);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #000000aa;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    nav h1 {
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: white;
+    }
+
+    section {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    .hero p {
+      font-style: italic;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 30px;
+      background: var(--primary);
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 15px var(--primary);
+    }
+
+    .image-divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .divider-img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .divider-img:hover {
+      transform: scale(1.03);
+    }
+
+    .glass-box {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: var(--glass);
+      border: 1px solid var(--primary);
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .glass-box h3, .glass-box h4 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .skill-item img {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 6px;
+      padding: 5px;
+    }
+
+    .skill-item .bar {
+      width: 250px;
+      height: 10px;
+      background: #333;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .skill-item .bar div {
+      height: 100%;
+      background: var(--primary);
+      transition: width 1s ease-in-out;
+    }
+
+    .contact-container {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact-intro {
+      margin-bottom: 30px;
+      font-style: popins;
+      color: #000000;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .form-group {
+      width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      max-width: 600px;
+      padding: 14px 18px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      box-shadow: 0 0 8px var(--primary);
+      outline: none;
+    }
+
+    .glow-btn {
+      background: var(--primary);
+      color: #000;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.4s ease;
+      box-shadow: 0 0 15px rgba(245, 242, 53, 0.5);
+    }
+
+    .glow-btn:hover {
+      box-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary);
+    }
+
+    footer {
+      padding: 30px;
+      background: #000000;
+      text-align: center;
+      font-size: 0.9rem;
+      color: white;
+    }
+
+    a.download {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.download:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h1>Revanth kumar</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Certifications</a></li>
+      <li><a href="#certifications">contact</a></li>
+      <li><a href="Revanth kumar - RESUME.pdf" download>Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Revanth Kumar</h1>
+    <h2>B.Tech  | Software Developer</h2>
+    <p>Motivated fresher with strong skills in Python, Django, and web development. Committed to building real-world tech with futuristic solutions.</p>
+    <a href="#contact" class="btn">📩 Contact Me</a>
+    <a href="Revanth kumar - RESUME.pdf" download class="btn">📄 Download Resume</a>
+  </section>
+
+  <!-- Decorative Image Section -->
+  <div class="image-divider">
+    <img src="my photo.jpg" alt="Decorative Image" class="divider-img">
+  </div>
+
+  <!-- About Section -->
+  <!-- Add this to your <style> section -->
+<style>
+  #about .glass-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--primary);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+  }
+
+  #about .glass-box h3 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #about .glass-box p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #fff;
+    text-align: justify;
+  }
+</style>
+
+<!-- Add this inside your <body> where you want the About section -->
+<section id="about">
+  <div class="glass-box">
+    <h3>About Me</h3>
+    <p>
+      I am a final-year Electronics and Communication Engineering student with strong programming skills and a deep interest in software development. I have hands-on experience with Python, HTML, CSS, and Figma. With a quick learning ability and a problem-solving mindset, I am eager to contribute to creating effective software solutions and to grow as part of an innovative development team.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="glass-box">
+      <h3>Skills Overview</h3>
+
+      <!-- Technical Skills -->
+      <h4>Technical Skills</h4>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+        <div>
+          <span>Python – 75%</span>
+          <div class="bar"><div style="width: 90%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub" />
+        <div>
+          <span>Git & GitHub – 70%</span>
+          <div class="bar"><div style="width: 70%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub" />
+        <div>
+          <span>Figma– 90%</span>
+          <div class="bar"><div style="width: 70%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+        <div>
+          <span>HTML & CSS – 80%</span>
+          <div class="bar"><div style="width: 80%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" />
+        <div>
+          <span>Django – 70%</span>
+          <div class="bar"><div style="width: 70%"></div></div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <h4 style="margin-top: 30px;">Soft Skills</h4>
+
+      <div class="skill-item">
+        <div>
+          <span>Teamwork – 85%</span>
+          <div class="bar"><div style="width: 85%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div>
+          <span>Communication – 80%</span>
+          <div class="bar"><div style="width: 80%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div>
+          <span>Problem Solving – 80%</span>
+          <div class="bar"><div style="width: 80%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div>
+          <span>Time Management – 90%</span>
+          <div class="bar"><div style="width: 90%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Certifications Section -->
+<section id="certifications">
+  <h2 style="text-align: center;">My Certifications</h2>
+  <div class="certificates-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+    
+    <!-- Certificate 1: NPTEL -->
+    <div class="certificate-card" style="background: #fff; padding: 15px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-width: 300px;">
+      <img src="Dasari_Revanth_Kumar_certificate_page-0001.jpg" alt="NPTEL Certificate" style="width: 100%; border-radius: 8px;">
+      <div class="certificate-info" style="margin-top: 10px; text-align: center;">
+        <h3 style="color: var(--primary); margin: 5px 0;">Transducers for Instrumentation</h3>
+        <p>NPTEL</p>
+      </div>
+    </div>
+
+    <!-- Certificate 2: UiPath -->
+    <div class="certificate-card" style="background: #fff; padding: 15px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-width: 300px;">
+      <img src="D Revanth kumar uipath_page-0001.jpg" alt="UiPath Certificate" style="width: 100%; border-radius: 8px;">
+      <div class="certificate-info" style="margin-top: 10px; text-align: center;">
+        <h3 style="color: var(--primary); margin: 5px 0;">Hack-a-bot</h3>
+        <p>UiPath – SVR College</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+   <section id="contact">
+  <div class="glass-box contact-container">
+    <h2 style="margin-bottom: 30px; color: var(--primary); font-size: 2rem;">📬 Get in Touch</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+      <!-- Contact Card: Email -->
+      <div class="contact-card">
+        <span class="icon">📧</span>
+        <h4>Email</h4>
+        <a href="mailto:kumarrevanth0480@gmail.com">kumarrevanth0480@gmail.com</a>
+      </div>
+
+      <!-- Contact Card: Phone -->
+      <div class="contact-card">
+        <span class="icon">📞</span>
+        <h4>Phone</h4>
+        <a href="tel:+919618562341">+91 96185 62341</a>
+      </div>
+
+      <!-- Contact Card: LinkedIn -->
+      <div class="contact-card">
+        <span class="icon">🔗</span>
+        <h4>LinkedIn</h4>
+        <a href="https://www.linkedin.com/in/revanth-kumar-5b20752bb" target="_blank">
+          linkedin.com/in/revanth-kumar
+        </a>
+      </div>
+
+      <!-- Contact Card: GitHub -->
+      <div class="contact-card">
+        <span class="icon">💻</span>
+        <h4>GitHub</h4>
+        <a href="https://github.com/revanthkumar480" target="_blank">
+          github.com/revanthkumar480
+        </a>
+      </div>
+
+      <!-- Contact Card: Credly -->
+      <div class="contact-card">
+        <span class="icon">🎖️</span>
+        <h4>Credly</h4>
+        <a href="https://www.credly.com/users/revanth-kumar" target="_blank">
+          credly.com/users/revanth-kumar
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+</section>
+
+  <section id="contact">
+    <div class="glass-box contact-container">
+      <h3>Let's Connect</h3>
+      <p class="contact-intro">Interested in collaborating or have a question? Drop me a message and I’ll get back to you!</p>
+
+      <form class="contact-form" action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="👤 Your Name" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" placeholder="📧 Your Email" required>
+        </div>
+
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="💬 Type your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="glow-btn">🚀 Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Revanth Kumar. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
